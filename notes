@@ -1,0 +1,29 @@
+Due to upgrades or changes to Opencv, code that displayed the modified/ original images immediately when the python scripts are executed is not working. This code exists in various scripts as:
+"cv2.imshow('nameOnWindowTitle",imageName)
+
+The error generated is:
+OpenCV Error: Unspecified error (The function is not implemented. Rebuild the library with Windows, GTK+ 2.x or Carbon support. If you are on Ubuntu or Debian, install libgtk2.0-dev and pkg-config, then re-run cmake or configure script) in cvShowImage, file /io/opencv/modules/highgui/src/window.cpp, line 583
+Traceback (most recent call last):
+
+In the meantime, a quick solution is to use 'cv2.imwrite' function only to save the image and not show it, or use
+from matplotlib import pyplot as plt
+...
+...
+...
+plt.imshow(imageName, cmap = 'gray', interpolation = 'bicubic')
+plt.xticks([]), plt.yticks([])  # to hide tick values on X and Y axis
+plt.show()
+
+	-or-
+plt.subplot(121),plt.imshow(imageName),plt.title('Original')
+plt.xticks([]), plt.yticks([])
+plt.subplot(122),plt.imshow(blurred),plt.title('Blurred')
+plt.xticks([]), plt.yticks([])
+plt.show()
+
+To view the image. However, still researching on plt.imshow() arguments to get proper color representation of image
+
+
+
+
+-O.O
