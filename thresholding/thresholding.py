@@ -1,6 +1,6 @@
 import cv2
-# import numpy as np
-# from matplotlib import pyplot as plt
+import numpy as np
+from matplotlib import pyplot as plt
 
 # in thresholding, images have to be converted to grayscale
 img = cv2.imread('babe.JPG')
@@ -15,4 +15,16 @@ cv2.imwrite('babe_gray.JPG', gray)
 img2 = cv2.imread('babe_gray.JPG')
 ret,thresh1 = cv2.threshold(img2,127,255,cv2.THRESH_BINARY)
 
+#save output on disk
 cv2.imwrite('ThresholdedImage1.JPG', thresh1)
+
+
+# print ret/show output
+print(ret)
+titles = ['Original Image','BINARY']
+images = [img, thresh1,]
+for i in range(2):
+    plt.subplot(1,2,i+1),plt.imshow(images[i],'gray') # 1 = no of rows, 2 = no of columns
+    plt.title(titles[i])
+    plt.xticks([]),plt.yticks([])
+plt.show()
