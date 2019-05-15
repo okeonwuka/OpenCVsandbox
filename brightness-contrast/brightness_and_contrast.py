@@ -14,4 +14,4 @@ beta = 50
 result = cv2.addWeighted(img,alpha,np.zeros(img.shape,img.dtype),0,beta)
 
 #store the result
-cv2.imwrite('babe_bc.JPG', result)
+cv2.imwrite('babe_bc.JPG', result) 

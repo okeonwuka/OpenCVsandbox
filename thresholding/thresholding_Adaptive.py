@@ -1,3 +1,15 @@
+"""
+Notes
+For the python build system for this file, I use python + virtualEnv
+This points to the python interpreter for my OpenCV4 virtual environment ie "/home/oke/.virtualenvs/Opencv4"
+To activate go to Menu->Tools->Command Pallete (ctr+Shift+P) then Choose ,"VirtualEnv: Activate". 
+You can also deactivate with "VirtualEnv: Dectivate" fill out the path of your VirtualEnv under. 
+To add a new virtual directory path, go to Menu->Tools->Command Pallete (command+Shift+P) then Choose "VirtualEnv: Add Directory"
+"""
+
+
+
+
 import cv2
 # import numpy as np
 # from matplotlib import pyplot as plt
@@ -20,10 +32,10 @@ img = cv2.imread('babe.JPG',0)
 thresh = cv2.adaptiveThreshold(img,255,cv2.ADAPTIVE_THRESH_GAUSSIAN_C,cv2.THRESH_BINARY_INV,7,10)
 
 # show output
-# cv2.imshow('ThresholdedAdaptiveImage1',thresh)
-# # hold off/ show imshow window till keybord input (number 0)
-# cv2.waitKey(0)
-# cv2.destroyAllWindows()
+cv2.imshow('ThresholdedAdaptiveImage1',thresh)
+# hold off/ show imshow window till keybord input (number 0)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
 
 
 # save output

@@ -1,3 +1,13 @@
+"""
+Notes
+For the python build system for this file, I use python + virtualEnv
+This points to the python interpreter for my OpenCV4 virtual environment ie "/home/oke/.virtualenvs/Opencv4"
+To activate go to Menu->Tools->Command Pallete (command+Shift+P) then Choose ,"VirtualEnv: Activate". 
+You can also deactivate with "VirtualEnv: Dectivate" fill out the path of your VirtualEnv under. 
+To add a new virtual directory path, go to Menu->Tools->Command Pallete (command+Shift+P) then Choose "VirtualEnv: Add Directory"
+"""
+
+
 # This code blends 2 images together, according to their alpha (opacity) value
 # The image with higher alpha value will be the more prominent image in the blend
 # Both input images have to be the same size for this to work
