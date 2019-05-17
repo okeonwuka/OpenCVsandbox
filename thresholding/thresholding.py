@@ -19,8 +19,10 @@ ret,thresh1 = cv2.threshold(img2,127,255,cv2.THRESH_BINARY)
 cv2.imwrite('ThresholdedImage1.JPG', thresh1)
 
 
-# print ret/show output
+
 print(ret)
+
+#show output
 titles = ['Original Image','BINARY']
 images = [img, thresh1,]
 for i in range(2):
